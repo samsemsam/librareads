@@ -1,0 +1,146 @@
+.book-details {
+    padding: 6rem 0;
+}
+
+.back-btn {
+    margin-left: 20px;
+    margin-bottom: 2.6rem;
+    transition: var(--transition);
+}
+
+.back-btn:hover {
+    color: var(--purple-color);
+}
+
+.back-btn span {
+    margin-left: 1rem;
+}
+
+.book-details-content {
+    gap: 4rem;
+}
+
+.book-details-img {
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.book-details-img img {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.book-details-item {
+    margin-top: -2.0rem;
+    margin-bottom: 1.0rem;
+}
+
+.book-details-item.description {
+    opacity: 0.8;
+    margin-bottom: 4.0rem;
+}
+
+.book-details-info {
+    overflow-y: scroll;
+    max-height: 600px;
+    padding: 1.4rem;
+}
+
+.book-details-info::-webkit-scrollbar {
+    width: 8px;
+}
+
+.book-details-info::-webkit-scrollbar-track {
+    border-radius: 8px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.book-details-info::-webkit-scrollbar-thumb {
+    background-color: var(--purple-color);
+    outline: -1px solid slategray;
+    border-radius: 8px;
+}
+
+.book-details-info button {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+}
+
+.book-details-info button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #b1dae7;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.2s ease;
+}
+
+.book-details-info button span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    -webkit-transition: all 0.3s ease;
+    color: #234567;
+}
+
+.book-details-info button svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    -webkit-transform: translateX(-5px);
+    -ms-transform: translateX(-5px);
+    transform: translateX(-5px);
+    -webkit-transition: all 0.3s ease;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+.book-details-info button:hover:before {
+    width: 100%;
+    background: #b1dae7;
+}
+
+.book-details-info button:hover svg {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.book-details-info button:active {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+}
+
+@media screen and (min-width: 768px) {
+    .book-details-content {
+        grid-template-columns: 40% 60%;
+        gap: 0
+    }
+
+    .book-details-img {
+        padding: 0 6rem 0 2rem;
+    }
+
+    .book-details-img img {
+        max-width: 100%;
+    }
+}

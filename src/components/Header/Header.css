@@ -1,0 +1,19 @@
+.header-content {
+    min-height: 75vh;
+    background: linear-gradient(rgba(141, 39, 174, 0.3), rgba(39, 165, 174, 0.5)), url("../../images/different-colours-books.jpg") center/cover no-repeat;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px 2px;
+}
+
+.header-title {
+    font-size: 4.2rem;
+    color: black;
+    margin-top: -38.375rem;
+}
+
+.header-text {
+    top: 100%;
+    opacity: 0.8;
+    max-width: 48.125rem;
+    color: black;
+}
