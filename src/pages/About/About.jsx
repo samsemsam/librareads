@@ -28,7 +28,7 @@ const About = () => {
             </div>
             <div className='about-contentBx'>
               <h4>Mohammad Wira Darma</h4>
-              <h5>"Hello My Brother Fitness"</h5>
+              <h5>00000082390</h5>
             </div>
             <div className='about-sci'>
               <a href='https://github.com/JohnJonnzz'>
@@ -50,7 +50,7 @@ const About = () => {
             </div>
             <div className='about-contentBx'>
               <h4>Riffa Putra</h4>
-              <h5>"Terima Kasih Orang Baik"</h5>
+              <h5>00000082581</h5>
             </div>
             <div className='about-sci'>
               <a href='https://github.com/reeves63'>
@@ -72,7 +72,7 @@ const About = () => {
             </div>
             <div className='about-contentBx'>
               <h4>Raditya Athar Ilazuard</h4>
-              <h5>"Besto Furendo!!!"</h5>
+              <h5>00000082732</h5>
             </div>
             <div className='about-sci'>
               <a href='https://github.com/StillFrost75'>
@@ -94,7 +94,7 @@ const About = () => {
             </div>
             <div className='about-contentBx'>
               <h4>Sammuel Tedjosurya</h4>
-              <h5>"Let's GO!!!"</h5>
+              <h5>00000081039</h5>
             </div>
             <div className='about-sci'>
               <a href='https://github.com/samsemsam'>
