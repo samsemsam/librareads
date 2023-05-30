@@ -12,7 +12,9 @@ const Navbar = () => {
       <div className='container navbar-content flex'>
         <div className='brand-and-toggler flex flex-sb'>
           <Link to="/" className='navbar-brand flex'>
-            <span className='fw-7 fs-24 ls-1'>LibraReads</span>
+            <span className='fw-7 fs-24 ls-1' style={{ fontFamily: 'Dancing Script', fontWeight: 1000 }}>
+              LibraReads
+            </span>
           </Link>
           <button type="button" className='navbar-toggler-btn' onClick={handleNavbar}>
             <HiOutlineMenuAlt3 size={35} style={{
@@ -38,7 +40,7 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

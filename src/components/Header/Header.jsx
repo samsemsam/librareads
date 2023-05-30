@@ -9,13 +9,13 @@ const Header = () => {
       <header className="header">
         <Navbar />
         <div className="header-content flex flex-c text-center text-white">
-          <h2 className="header-title text-capitalize">Find your Book.</h2>
+          <h1 className="header-title text-capitalize">Find your Book</h1>
           <br />
           <p className="header-text fs-18 fw-3"></p>
           <SearchBar />
         </div>
       </header>
-    </div >
+    </div>
   );
 };
 

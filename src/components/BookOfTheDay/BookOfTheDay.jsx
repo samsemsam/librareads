@@ -69,10 +69,12 @@ const BookOfTheDay = () => {
                         <p>First Publish Year: {bookOfTheDay.first_publish_year}</p>
                     </div>
                 </div>
+
             ) : (
                 <p>Loading...</p>
             )}
         </div>
+
     );
 };
 
