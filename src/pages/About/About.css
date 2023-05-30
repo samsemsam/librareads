@@ -93,6 +93,7 @@
   font-weight: bold;
   text-align: center;
   letter-spacing: 0px;
+  
 }
 
 .about-sci {
@@ -102,7 +103,7 @@
 
 .about-sci a {
   text-decoration: none;
-  color: #6c758f;
+  color: #08155a;
   font-size: 30px;
   margin: 10px;
   transition: color 0.4s;
