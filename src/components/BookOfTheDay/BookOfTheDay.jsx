@@ -13,23 +13,121 @@ const BookOfTheDay = () => {
     setLoading(true);
     async function fetchBookOfTheDay() {
       try {
-        const searchKeywords = ["fantasy", "mystery", "adventure", "romance", "science fiction"];
+        const searchKeywords = [
+    "fantasy",
+    "mystery",
+    "adventure",
+    "romance",
+    "science fiction",
+    "architecture",
+    "art instruction",
+    "art history",
+    "dance",
+    "design",
+    "fashion",
+    "film",
+    "graphic design",
+    "music",
+    "music theory",
+    "painting",
+    "photography",
+    "bears",
+    "cats",
+    "kittens",
+    "dogs",
+    "puppies",
+    "fiction",
+    "fantasy",
+    "historical fiction",
+    "horror",
+    "humor",
+    "literature",
+    "magic",
+    "mystery and detective stories",
+    "plays",
+    "poetry",
+    "romance",
+    "science fiction",
+    "short stories",
+    "thriller",
+    "young adult",
+    "science & mathematics",
+    "biology",
+    "chemistry",
+    "mathematics",
+    "physics",
+    "programming",
+    "business & finance",
+    "management",
+    "entrepreneurship",
+    "business economics",
+    "business success",
+    "finance",
+    "children's",
+    "kids books",
+    "stories in rhyme",
+    "baby books",
+    "bedtime books",
+    "picture books",
+    "history",
+    "ancient civilization",
+    "archaeology",
+    "anthropology",
+    "world war II",
+    "social life and customs",
+    "cooking",
+    "cookbooks",
+    "mental health",
+    "exercise",
+    "nutrition",
+    "self-help",
+    "biography",
+    "autobiographies",
+    "history",
+    "politics and government",
+    "world war II",
+    "women",
+    "kings and rulers",
+    "composers",
+    "artists",
+    "anthropology",
+    "religion",
+    "political science",
+    "psychology",
+    "brazil",
+    "india",
+    "indonesia",
+    "united states",
+    "textbooks",
+    "history",
+    "mathematics",
+    "geography",
+    "psychology",
+    "algebra",
+    "education",
+    "business & economics",
+    "science",
+    "chemistry",
+    "english language",
+    "physics",
+    "computer science"
+  ];
         const randomKeyword = searchKeywords[Math.floor(Math.random() * searchKeywords.length)];
-        const response = await fetch(`http://openlibrary.org/search.json?title=${randomKeyword}`);
+        const response = await fetch(`https://openlibrary.org/search.json?subject=${randomKeyword}`);
         const data = await response.json();
 
-        if (data.docs) {
-          const bookList = data.docs.map((book) => ({
-            id: book.key.replace(/^\/works\//, ""),
-            title: book.title,
-            author: book.author_name || [],
-            cover_id: book.cover_i,
-            edition_count: book.edition_count,
-            first_publish_year: book.first_publish_year
-          }));
+        if (data.docs && data.docs.length > 0) {
+          const randomIndex = Math.floor(Math.random() * data.docs.length);
+          const selectedBookData = data.docs[randomIndex];
 
-          const randomIndex = Math.floor(Math.random() * bookList.length);
-          const selectedBook = bookList[randomIndex];
+          const selectedBook = {
+            id: selectedBookData.key.replace(/^\/works\//, ""),
+            title: selectedBookData.title,
+            author: selectedBookData.author_name || [],
+            cover_id: selectedBookData.cover_i,
+            edition_count: selectedBookData.edition_count,
+            first_publish_year: selectedBookData.first_publish_year,
+          };
 
           if (selectedBook.cover_id) {
             selectedBook.cover_img = `https://covers.openlibrary.org/b/id/${selectedBook.cover_id}-L.jpg`;
@@ -57,7 +155,9 @@ const BookOfTheDay = () => {
   return (
     <div className="book-of-the-day">
       <h2>Book of the Day</h2>
-      {bookOfTheDay ? (
+      {loading ? (
+        <p>Loading...</p>
+      ) : bookOfTheDay ? (
         <div className="book-container">
           <Link to={`/book/${bookOfTheDay.id}`} onClick={handleLinkClick}>
             <img src={bookOfTheDay.cover_img} alt="cover" />
@@ -72,7 +172,7 @@ const BookOfTheDay = () => {
           </div>
         </div>
       ) : (
-        <p>Loading...</p>
+        <p>No books found for the selected subject.</p>
       )}
     </div>
   );
