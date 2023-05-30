@@ -103,7 +103,7 @@ const About = () => {
               <a href='https://www.instagram.com/samtss_/'>
                 <i className='fa fa-instagram'></i>
               </a>
-              <a href='#'>
+              <a href='https://steamcommunity.com/id/Kaganeka'>
                 <i className='fa fa-steam'></i>
               </a>
             </div>

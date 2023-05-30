@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const BookOfTheDay = () => {
     const [bookOfTheDay, setBookOfTheDay] = useState(null);
-    const [loading, setLoading] = useState(false);
+    const [setLoading] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
