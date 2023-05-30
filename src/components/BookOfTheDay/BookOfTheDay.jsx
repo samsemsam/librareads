@@ -13,7 +13,9 @@ const BookOfTheDay = () => {
     setLoading(true);
     async function fetchBookOfTheDay() {
       try {
-        const response = await fetch("http://openlibrary.org/search.json?title=book");
+        const searchKeywords = ["fantasy", "mystery", "adventure", "romance", "science fiction"];
+        const randomKeyword = searchKeywords[Math.floor(Math.random() * searchKeywords.length)];
+        const response = await fetch(`http://openlibrary.org/search.json?title=${randomKeyword}`);
         const data = await response.json();
 
         if (data.docs) {
